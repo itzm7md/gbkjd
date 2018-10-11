@@ -258,6 +258,8 @@ client.on("message", message => {
 💎1stop💎
 
 💎1pause💎
+message.author.sendEmbed(embed)
 
-💎^id
+}
+});
  client.login(process.env.BOT_TOKEN);
