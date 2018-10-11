@@ -13,7 +13,7 @@ client.on('ready', function() {
 });
  
       client.on('ready', () => {
-              client.user.setActivity("1play | .Fun", {type: 'LISTENING'});
+              client.user.setActivity("1play | tuh", {type: 'LISTENING'});
      
       });
 /*
@@ -206,5 +206,58 @@ function isYoutube(str) {
       message.channel.send({embed});
      }
     });
- 
+ const adminprefix = "1";
+const devs = ['272808689688248320','474614420505493516'];
+client.on('message', message => {
+  var argresult = message.content.split(`).slice(1).join(' ');
+    if (!devs.includes(message.author.id)) return;
+    
+if (message.content.startsWith(adminprefix + 'setgame')) {
+  client.user.setGame(argresult);
+    message.channel.sendMessage(${argresult} تم تغيير بلاينق البوت إلى )
+} else 
+  if (message.content.startsWith(adminprefix + 'setname')) {
+client.user.setUsername(argresult).then
+    message.channel.sendMessage(${argresult} : تم تغيير أسم البوت إلى)
+return message.reply("**لا يمكنك تغيير الاسم يجب عليك الانتظآر لمدة ساعتين . **");
+} else
+  if (message.content.startsWith(adminprefix + 'setavatar')) {
+client.user.setAvatar(argresult);
+  message.channel.sendMessage(${argresult} : تم تغير صورة البوت);
+      } else     
+if (message.content.startsWith(adminprefix + 'setT')) {
+  client.user.setGame(argresult, "https://www.twitch.tv/idk");
+    message.channel.sendMessage(تم تغيير تويتش البوت إلى  ${argresult}`)
+}
+});
+client.on("message", message => {
+ if (message.content === "1help") {
+        message.react(":kissing_heart:")
+           message.react(":dizzy_face:")
+  const embed = new Discord.RichEmbed() 
+      .setColor("#ffff00")
+      .setThumbnail(message.author.avatarURL)
+      .setDescription(-🚀 سرعه اتصال ممتازه
+-😎 سهل الاستخدام 
+-⚠ صيانه كل يوم
+-📚 البوت عربي و سيتم اضافه اللغه النقليزية
+
+
+● ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ● 
+
+💎تفضل💎
+
+💎1play💎
+
+💎1skip💎
+
+💎1vol💎
+
+💎1resume💎
+                      
+💎1stop💎
+
+💎1pause💎
+
+💎^id
  client.login(process.env.BOT_TOKEN);
