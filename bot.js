@@ -46,7 +46,7 @@ client.on("message", message => {
 
 client.on('message', message => {
     var  user = message.mentions.users.first() || message.author;
-if (message.content.startsWith("b!avatar")) {
+if (message.content.startsWith("!avatar")) {
 message.channel.send(`This avatar For ${user} link : ${user.avatarURL}`);
 }
 });
@@ -66,7 +66,7 @@ client.on('ready',  () => {
   client.on('message', message => {
     if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
-if (message.content.startsWith('b!adminbc')){
+if (message.content.startsWith('!adminbc')){
 if(!message.author.id === '340991135264800778') return;
 message.channel.sendMessage('جار ارسال الرسالة |:white_check_mark:')
 client.users.forEach(m =>{
@@ -103,22 +103,12 @@ m.sendMessage(args)
 
        !bc  |  لأرسال برود كاست للأونلاين
 
-       !invite | لدعوة البوت الي سيرفرك** `)
+       
    message.author.sendEmbed(embed)
    
    }
    });
 
-
-   client.on("message", message => {
-    if (message.content === "!invite") {
-     const embed = new Discord.RichEmbed()
-         .setColor("RANDOM")
-         .addField('Broadcast', `https://discordapp.com/api/oauth2/authorize?client_id=489960386339274771&permissions=8&scope=bot`)
-     message.author.send({embed});
-   
-    }
-   });
 
 
 
@@ -149,7 +139,7 @@ m.sendMessage(args)
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag} !`);
-          client.user.setActivity("!help ",{type: 'STREAMING'});
+          client.user.setActivity("Legends4Ever ",{type: 'STREAMING'});
   
   });
 
